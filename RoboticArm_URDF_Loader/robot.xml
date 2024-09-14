@@ -1,0 +1,45 @@
+<robot 
+    name="roboticarm_assembly1">
+  <!-- Base -->
+    <link 
+        name="Base">
+        <visual>
+            <geometry>
+                <mesh 
+                    filename="../stl/AS1_P1.stl"/>
+            </geometry>
+            </visual>
+            <collision>
+            <geometry>
+                <mesh 
+                    filename="../stl/AS1_P1.stl"/>
+            </geometry>
+            </collision>
+        </link>
+
+    <link 
+        name="link_1">
+        <visual>
+            <geometry>
+                <mesh 
+                    filename="../stl/AS1_P2.stl"/>
+            </geometry>
+            </visual>
+            <collision>
+            <geometry>
+                <mesh 
+                    filename="../stl/AS1_P2.stl"/>
+            </geometry>
+            </collision>
+    </link>
+
+
+    <joint 
+        name="joint_1" type="revolute">
+            <parent link="Base"/>
+            <child link="link_1"/>
+            <origin xyz="0 0 0.1" rpy="0 0 0"/>
+            <axis xyz="0 0 1"/>
+            <limit lower="-1.57" upper="1.57" effort="10" velocity="1"/>
+    </joint>
+
