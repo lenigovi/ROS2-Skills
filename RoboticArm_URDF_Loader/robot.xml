@@ -1,6 +1,6 @@
 <robot 
     name="roboticarm_assembly1">
-  <!-- Base -->
+    <!-- Base -->
     <link 
         name="Base">
         <inertial>
@@ -26,8 +26,7 @@
                     filename="../meshes/AS1_P1.stl"/>
             </geometry>
             </collision>
-        </link>
-
+    </link>
     <link 
         name="Link_1">
         <inertial>
@@ -54,8 +53,6 @@
             </geometry>
             </collision>
     </link>
-
-
     <joint 
         name="Joint_1" type="revolute">
             <parent link="Base"/>
@@ -64,11 +61,7 @@
             <axis xyz="0 0 1"/>
             <limit lower="-1.57" upper="1.57" effort="10" velocity="1"/>
     </joint>
-
-
-
-  <!-- Body -->
-
+    <!-- Body -->
     <link 
         name="Body">
         <visual>
@@ -89,8 +82,7 @@
                     filename="../meshes/AS1_P10.stl"/>
             </geometry>
             </collision>
-        </link>
-
+    </link>
     <joint 
         name="Joint_2" type="revolute">
             <parent link="Link_1"/>
@@ -99,8 +91,6 @@
             <axis xyz="0 0 1"/>
             <limit lower="-1.57" upper="1.57" effort="10" velocity="1"/>
     </joint>
-
-
     <link 
         name="Body_Upper">
         <visual>
@@ -121,8 +111,7 @@
                     filename="../meshes/AS1_P3.stl"/>
             </geometry>
             </collision>
-        </link>
-
+    </link>
     <joint 
         name="Joint_3" type="revolute">
             <parent link="Body"/>
@@ -131,8 +120,6 @@
             <axis xyz="0 0 1"/>
             <limit lower="-1.57" upper="1.57" effort="10" velocity="1"/>
     </joint>
-
-
     <link 
         name="Body_Upper_Link">
         <visual>
@@ -147,9 +134,7 @@
                     filename="../meshes/AS1_P4.stl"/>
             </geometry>
             </collision>
-        </link>
-
-
+    </link>
     <link 
         name="Body_End">
         <visual>
@@ -164,9 +149,7 @@
                     filename="../meshes/AS1_P6.stl"/>
             </geometry>
             </collision>
-        </link>
-
-
+    </link>
     <joint 
         name="Joint_4" type="revolute">
             <parent link="Body_Upper"/>
@@ -175,6 +158,4 @@
             <axis xyz="0 0 1"/>
             <limit lower="-1.57" upper="1.57" effort="10" velocity="1"/>
     </joint>
-
-
 </robot>
