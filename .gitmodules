@@ -1,0 +1,3 @@
+[submodule "ROS-Controller-Innok-Heros"]
+	path = ROS-Controller-Innok-Heros
+	url = https://github.com/lenigovi/ROS-Controller-Innok-Heros
